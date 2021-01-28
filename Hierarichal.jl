@@ -210,15 +210,6 @@ end
 bar(TotVarHts)
 histogram(TotVarHts)
 
-63746
-63762
-68026
-72037
-72707---
-72714---
-77674
-78716---
-
 
 #---------------------------------------------
 SURFERS = sort(unique(map(x->x.athName, waves)))
