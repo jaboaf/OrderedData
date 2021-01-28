@@ -1,0 +1,67 @@
+These are the fields in the data:
+
+Comprehensiveness of Data
+- Includes all waves in the 2017, 2018, 2019 Seasons of the WCT
+- Margaret River CT 2018 starts in Australia and moves to Uluwatu in Bali, Indonesia (starting with round 3)
+    - All waves in this event have evtName="Margaret River".
+    - waves surfed at Margaret River in Australia have evtOrig="Australia"
+    - waves surfed in the event but in Indonesia have evtOrig="Indonesia"
+
+Year Info:
+"evtYear" := Year of Event
+
+Event Info:
+"evtName" := Name of event
+"evtOrig" := Location of Event, this does reflect the location change from Margaret River, AUS to Bali, IND in 2018
+"evtId" := Identifier of Event
+
+Round Info:
+"rnd" := Round in Event. 1 is always the first round, but event formats have changed over the years so care should be taken when aggregating by round.
+"rndId" := Identifier of Round
+
+Heat Info:
+"heat" := Heat Number in Round
+"heatId" := Identifier of Heat
+
+Athlete Info:
+"athName" := Athletes Name
+"athId" := Identifier of Athelete
+"athOrig" := Athletes Nationality
+
+Score Info:
+"actualSco" := The score the athlete received. This the is the trimmed mean of the sub scores. This does not account for interference.
+
+"subScoDefect" := Indicator for not all panel scores being given
+"subScoOrigDefect" := Indicator for not all judge origins being given
+
+"subSco" := The scores the various judges gave the surfer. This is ordered. There are usually 5 judges
+"nSubScos" := The number of scores given for the wave. This is almost always 5, however sometimes less.
+
+"subScoOrig" := The Nationality of the judges on the panel. This is ordered.
+"nJudOrigs" := The number of judge nationalities given.
+
+"validSubScos" := This is a list of all scores given by judges, ie. non-defective
+"noMatchSubScos" := Scores given by judges with nationalities different from the surfer's Nationality.
+"matchSubScos" := Scores given by judges with same nationality as surfer.
+
+Season Points Info:
+"currentPoints" := Number of points the athlete has in the given year, at the time that the wave was surfed.
+"endingPoints" := Number of points the athlete has at the end of the year.
+
+Some Indicators:
+"noMatches" := Number of judges with nationality that is not the surfers nationality.
+"matches" := Number of judges with same nationality as surfer
+"atHome" := An indicator of if the surfer is surfing in their country of origin.
+
+Brief Set of Statistics:
+"actualScoVar" := Variance of sub scores with the highest and lowest being dropped
+"actualScoLevel" := Score level as defined by WSL handbook.
+
+"matchMean" := Mean of scores from judges with different nationality than surfer
+"matchVar" := Variance of scores from judges with same nationality than surfer
+
+"noMatchMean" := Mean of scores from judges with different nationality than surfer
+"noMatchVar" := Variance of scores from judges with different nationality than surfer
+
+"subScoMean" := Mean of valid sub scores
+"subScoVar" := Variance of valid sub scores
